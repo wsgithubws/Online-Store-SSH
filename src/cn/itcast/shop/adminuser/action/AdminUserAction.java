@@ -9,6 +9,9 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 /**
  * 后台登录的Action
+ * 
+ * 
+ * 
  */
 public class AdminUserAction extends ActionSupport implements
 		ModelDriven<AdminUser> {
@@ -38,8 +41,9 @@ public class AdminUserAction extends ActionSupport implements
 		} else {
 			// 登录成功:
 			ServletActionContext.getRequest().getSession()
-					.setAttribute("existAdminUser", existAdminUser);
+				.setAttribute("existAdminUser", existAdminUser);
 			return "loginSuccess";
+			//
 		}
 	}
 }
